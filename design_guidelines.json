@@ -1,0 +1,173 @@
+{
+  "identity": {
+    "persona": "E1",
+    "role": "Creative Designer",
+    "aesthetic": "Luxury Minimalist",
+    "principles": [
+      "Fusion over Imitation",
+      "Emotion First",
+      "Content is King",
+      "Zoom In",
+      "Negative Space",
+      "Contrast"
+    ]
+  },
+  "design_system": {
+    "theme": "light",
+    "colors": {
+      "background": "#F9F5F2",
+      "foreground": "#333333",
+      "primary": "#A67070",
+      "primary_foreground": "#FFFFFF",
+      "secondary": "#FFFFFF",
+      "secondary_foreground": "#333333",
+      "accent": "#E8Ddd5",
+      "accent_foreground": "#333333",
+      "muted": "#EFE6E0",
+      "muted_foreground": "#666666",
+      "border": "#DCCac0",
+      "input": "#FFFFFF",
+      "ring": "#A67070"
+    },
+    "typography": {
+      "font_family_heading": "Playfair Display, serif",
+      "font_family_body": "Montserrat, sans-serif",
+      "scale": {
+        "h1": "text-5xl md:text-7xl font-medium tracking-tight leading-tight",
+        "h2": "text-4xl md:text-5xl font-medium tracking-tight",
+        "h3": "text-2xl md:text-3xl font-medium",
+        "body": "text-base md:text-lg leading-relaxed tracking-wide",
+        "caption": "text-sm tracking-widest uppercase"
+      }
+    },
+    "spacing": {
+      "container_padding": "px-6 md:px-12 lg:px-24",
+      "section_spacing": "py-20 md:py-32",
+      "element_spacing": "gap-6 md:gap-12"
+    },
+    "visual_enhancers": {
+      "radius": "rounded-none md:rounded-sm",
+      "shadows": "shadow-[0_4px_20px_-2px_rgba(166,112,112,0.1)]",
+      "glass": "bg-white/60 backdrop-blur-md border border-white/40",
+      "texture": "bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-50 mix-blend-multiply"
+    }
+  },
+  "assets": {
+    "images": {
+      "hero": {
+        "url": "https://images.unsplash.com/photo-1758749220219-83a817a9356d?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "alt": "High fashion editorial makeup portrait with dramatic lighting",
+        "category": "hero"
+      },
+      "portfolio": [
+        {
+          "url": "https://images.unsplash.com/photo-1758749652183-3c7bb8f9641d?crop=entropy&cs=srgb&fm=jpg&q=85",
+          "alt": "Avant-garde purple lipstick look",
+          "category": "editorial"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1742893071818-ba15a3b588a0?crop=entropy&cs=srgb&fm=jpg&q=85",
+          "alt": "Dramatic fashion makeup",
+          "category": "fashion"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1710494422513-84f510745792?crop=entropy&cs=srgb&fm=jpg&q=85",
+          "alt": "Traditional Indian bridal makeup",
+          "category": "bridal"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1684868265714-fd2300637c23?crop=entropy&cs=srgb&fm=jpg&q=85",
+          "alt": "Bridal detail shot with jewelry",
+          "category": "bridal"
+        }
+      ],
+      "process": {
+        "url": "https://images.unsplash.com/photo-1765852549357-7dc1979a4ead?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "alt": "Makeup artist applying makeup to client",
+        "category": "about"
+      },
+      "texture": {
+        "url": "https://images.unsplash.com/photo-1590156351813-11741a501057?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "alt": "Luxury makeup brush texture",
+        "category": "background"
+      }
+    },
+    "icons": {
+      "library": "lucide-react",
+      "preferred_icons": ["Star", "Users", "Clock", "Heart", "Instagram", "Mail", "ArrowRight", "Menu", "X"]
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#A67070] text-white hover:bg-[#8E5E5E] rounded-full px-8 py-3 text-sm uppercase tracking-widest transition-all duration-300 hover:scale-105",
+      "secondary": "bg-transparent border border-[#A67070] text-[#A67070] hover:bg-[#A67070] hover:text-white rounded-full px-8 py-3 text-sm uppercase tracking-widest transition-all duration-300",
+      "link": "text-[#333333] hover:text-[#A67070] underline-offset-4 hover:underline transition-colors"
+    },
+    "cards": {
+      "service": "group relative overflow-hidden bg-white p-8 transition-all hover:shadow-xl border border-[#E8Ddd5]",
+      "portfolio": "relative aspect-[3/4] overflow-hidden bg-gray-100 group cursor-pointer"
+    },
+    "inputs": {
+      "default": "bg-transparent border-b border-[#A67070] px-0 py-4 text-[#333333] placeholder:text-[#A67070]/50 focus:border-[#333333] focus:ring-0 rounded-none transition-colors"
+    }
+  },
+  "layout_strategies": {
+    "hero": {
+      "type": "split_screen_with_overlap",
+      "description": "Large typography on left, overlapping image on right with parallax effect. Background texture overlay."
+    },
+    "services": {
+      "type": "bento_grid",
+      "description": "Asymmetrical grid. 3 columns. Mix of text-only cards and image-background cards."
+    },
+    "portfolio": {
+      "type": "masonry_filtered",
+      "description": "Masonry layout with sticky category filter bar. Images reveal with fade-up animation."
+    },
+    "process": {
+      "type": "timeline_vertical",
+      "description": "Vertical line with numbered steps. Content fades in as user scrolls down."
+    }
+  },
+  "motion": {
+    "library": "framer-motion",
+    "scroll": "lenis",
+    "animations": {
+      "fade_up": {
+        "initial": { "opacity": 0, "y": 20 },
+        "whileInView": { "opacity": 1, "y": 0 },
+        "viewport": { "once": true },
+        "transition": { "duration": 0.6, "ease": "easeOut" }
+      },
+      "stagger_container": {
+        "hidden": { "opacity": 0 },
+        "show": {
+          "opacity": 1,
+          "transition": { "staggerChildren": 0.1 }
+        }
+      },
+      "hover_scale": {
+        "whileHover": { "scale": 1.05 },
+        "transition": { "duration": 0.3 }
+      }
+    }
+  },
+  "instructions_to_main_agent": [
+    "1. INSTALL DEPENDENCIES: npm install framer-motion @studio-freight/react-lenis lucide-react clsx tailwind-merge",
+    "2. SETUP FONTS: Import Playfair Display and Montserrat from Google Fonts in index.css",
+    "3. CONFIGURE TAILWIND: Update tailwind.config.js with the color palette provided in design_system.colors",
+    "4. IMPLEMENT SMOOTH SCROLL: Wrap the entire application in <ReactLenis root>",
+    "5. BUILD COMPONENTS: Create reusable UI components (Button, Section, Card) using the styles defined.",
+    "6. ASSEMBLE PAGES: Build the Homepage sections (Hero, Stats, Services, Process, Portfolio, Contact).",
+    "7. ADD ANIMATIONS: Apply Framer Motion variants to all sections. Ensure text staggers and images fade up.",
+    "8. INTEGRATE FORMS: Use a simple form handler for the contact section.",
+    "9. VERIFY CONTRAST: Ensure all text over images has proper overlay or shadow."
+  ],
+  "universal_guidelines": [
+    "Do not use generic centered layouts.",
+    "Use 2-3x more spacing than feels comfortable.",
+    "Every interaction needs micro-animations.",
+    "Use 'sonner' for toasts.",
+    "All interactive elements MUST include data-testid."
+  ]
+}
